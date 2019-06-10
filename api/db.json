@@ -1,3 +1,38 @@
 {
-  "streams" : []
+  "streams": [
+    {
+      "title": "Overwatch",
+      "description": "My first stream",
+      "id": 1
+    },
+    {
+      "title": "Overwatch",
+      "description": "My first stream",
+      "id": 2
+    },
+    {
+      "title": "New stream",
+      "description": "New Streams after userId added",
+      "userId": "100517264123382051215",
+      "id": 3
+    },
+    {
+      "title": "New stream",
+      "description": "New Streams after userId added",
+      "userId": "100517264123382051215",
+      "id": 4
+    },
+    {
+      "title": "Overwatch ranked",
+      "description": "Welcome to my stream",
+      "userId": "100517264123382051215",
+      "id": 5
+    },
+    {
+      "title": "hello",
+      "description": "hello",
+      "userId": "100517264123382051215",
+      "id": 6
+    }
+  ]
 }

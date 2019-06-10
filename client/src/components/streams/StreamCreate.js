@@ -3,6 +3,8 @@ import React from 'react';
 //reduxForm is a redux-form function, it has exact fuctionality as connect from react-redux
 //reduxForm makes sure we can call action creators and get form data into our component; happens automatically
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { createStream } from '../../actions';
 
 //The Field component is just about hooking up the infrastructure, but is not responsible for showing anything on screen
 //We need a prop in Field, in this case "component", to actually render stuff on screen
@@ -31,8 +33,8 @@ class StreamCreate extends React.Component {
   }
 
   //reduxForm can handle passing the form value over in the props
-  onSubmit(formValues){
-    console.log(formValues);
+  onSubmit = (formValues) =>{
+    this.props.createStream(formValues);
   }
 
   render(){
@@ -62,7 +64,10 @@ const validate = (formValues)=>{
 }
 //reduxForm function receives a single object as argument
 //as soon as reduxForm is hooked up to this component, it receives a lot of props
-export default reduxForm({
+const formWrapped = reduxForm({
   form: 'streamCreate',
   validate
 })(StreamCreate);
+
+
+export default connect(null, { createStream })(formWrapped);
